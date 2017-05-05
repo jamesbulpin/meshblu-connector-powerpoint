@@ -39,6 +39,7 @@ install:
 script:
 - echo "no build"
 before_deploy:
+- npm install meshblu-connector-packager
 - npm run generate:package
 - npm run generate:schema
 - cp schemas.json deploy
