@@ -36,8 +36,6 @@ before_install:
 - if [ "$TRAVIS_OS_NAME" == "linux" -a "$MAIN_BUILD" == "true" ]; then export NPM_PUBLISH="true"; fi
 install:
 - npm install --build-from-source
-script:
-- npm test
 before_deploy:
 - npm run generate:package
 - npm run generate:schema
