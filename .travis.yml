@@ -1,7 +1,6 @@
 language: cpp
 os:
 - linux
-- osx
 addons:
   apt:
     sources:
@@ -40,11 +39,6 @@ install:
 script:
 - npm test
 before_deploy:
-- npm prune --production
-- npm install meshblu-connector-packager
-- npm dedupe
-- npm install -g flatten-packages
-- flatten-packages
 - npm run generate:package
 - npm run generate:schema
 - cp schemas.json deploy
@@ -58,10 +52,3 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-- provider: npm
-  email: james.bulpin@citrix.com
-  api_key:
-    secure: "QucQTzVtM7CGyiKol4NVKQ3/kf2jmcklU5kJErVEmY3f15LsicvTgXv2S62wy+seJFtxqcdD04FDt9dK7TFnrQpoMc996Hbh2gVGUscvdyzk6y6EUom19LNYbzPIUzUQUtORqxI/lzbzNVGiIpy13ZhVrxFsLZYTKdqseMsWfLYR+EJm8o6ivSgIURHEfmddmvGnF11uf4tofuMUhI5K1DWtmohYIMNZLieYTvHv0CvB20FECKNyxQ/vmgi16oga6PmXe7pgdQmlUfi01MhcDVYMp51JDeZvaOYJyCadynZN/fuOTguTRhyDp2BoJSdC4H7ArgPHNgg/bn+4llB80UscqPvBqQSGXEh+oFLVIbGJAC3rXEjXFmXiduw7SjUB3GNoGzwQM4dYU2eDQIKVmpxD7279ILRaVUN1tNokuYvMsfHepiobIukLsUbjMIk589BoZI7F2d+5AqyZwoMJ88Qj4WB4o1tXeSO2xMK0lsW0qq8ZA7gkZLmA6TgcRwxUkcynjiyq+hOWP9m1EhakkuBO8trFj7H49jkc1dvUkN4/ZFl7MJWdl3hC4UohEhRehl6igc3bqvWNfLvNqM6dXo++2uZ9LndWGY+7e48JEXZKrjOIePxKvfNwDOPtupv2kfucVm8JZNzYS/P/Z76XBNljZUMnCamcx2TQu/nNZoU="
-  on:
-    tags: true
-    condition: "$NPM_PUBLISH = true"

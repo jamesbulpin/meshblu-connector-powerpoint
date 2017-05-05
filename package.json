@@ -1,6 +1,6 @@
 {
   "name": "meshblu-connector-powerpoint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Meshblu connector for automating PowerPoint presentations",
   "homepage": "https://github.com/jamesbulpin/meshblu-connector-powerpoint",
   "bugs": "https://github.com/jamesbulpin/meshblu-connector-powerpoint/issues",
