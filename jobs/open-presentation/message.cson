@@ -1,0 +1,11 @@
+title: 'OpenPresentation'
+type: 'object'
+properties:
+  data:
+    type: 'object'
+    properties:
+      filename:
+        type: 'string'
+    required: [
+      'filename'
+    ]

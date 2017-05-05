@@ -1,0 +1,55 @@
+{
+  "name": "meshblu-connector-powerpoint",
+  "version": "0.0.1",
+  "description": "Meshblu connector for automating PowerPoint presentations",
+  "homepage": "https://github.com/jamesbulpin/meshblu-connector-powerpoint",
+  "bugs": "https://github.com/jamesbulpin/meshblu-connector-powerpoint/issues",
+  "author": {
+    "name": "James Bulpin",
+    "url": "https://github.com/jamesbulpin"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesbulpin/meshblu-connector-powerpoint.git"
+  },
+  "scripts": {
+    "start": "meshblu-connector-runner",
+    "test": "mocha",
+    "generate:package": "meshblu-connector-packager",
+    "generate:schema": "meshblu-connector-schema-generator > schemas.json"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-coverage": "^2.0.1",
+    "mocha": "^3.2.0",
+    "segfault-handler": "^1.0.0",
+    "sinon": "^2.0.0",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "coffee-script": "^1.12.4",
+    "debug": "^2.6.3",
+    "fs-cson": "^0.3.2",
+    "meshblu-config": "^7.0.0",
+    "meshblu-connector-runner": "^10.5.3",
+    "meshblu-connector-schema-generator": "^2.1.0",
+    "slideshow": "^1.0.0"
+  },
+  "meshbluConnector": {
+    "githubSlug": "jamesbulpin/meshblu-connector-powerpoint"
+  },
+  "platformDependencies": {
+    "darwin": [],
+    "win32": [],
+    "win64": [],
+    "linux": [],
+    "android": null,
+    "ios": null
+  },
+  "license": "MIT",
+  "keywords": [
+    "meshblu-connector",
+    "gateblu"
+  ]
+}

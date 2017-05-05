@@ -1,0 +1,11 @@
+title: 'GotoSlide'
+type: 'object'
+properties:
+  data:
+    type: 'object'
+    properties:
+      slide:
+        type: 'string'
+    required: [
+      'slide'
+    ]
