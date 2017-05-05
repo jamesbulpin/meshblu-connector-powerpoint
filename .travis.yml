@@ -51,7 +51,7 @@ before_deploy:
 deploy:
 - provider: releases
   api_key:
-    [github-release-key]
+    secure: "T4Cor84QEDn0Qql+bNqL+VLcLieU/iZ5qf5jWzXc/mjTCOrho2qOEwOjrLUX5foUJZ8PEjXLPz+vjfLc33FSGl8hvaTYk29DwvVLe4mvtjbelmXkZuvRHYaRvjocxRE8IM8BCUDeJKImRhKp8C0l3HI66mR2t66J0lrkFopfgrCOjWbW7GC0rgx+d+whtcu8sHdUuCmYaJCVywZ0FLEr2VsIaWqOPbEI38dmUlq7ZbTOvFRfcZE9obgDgKZe0BPC86AqaRTPyalq30tYhXnx8FbNk3vdq9sW5QWtK3R/CxW1EIUez//Nf0ms0z3PGN3R6YLzi4Umx+SuqSME7RI99wJjFcRpMmJTrtaiR5e65K8O64aakPmXpd81sITzoAlusM9OwZ/0z5yidkW5XJ+Qo/fXDNv4Nfpj9lWc8DB5FBkkDNcVbtxr822dfAefW2bYNjvjt7iO0BGNdOsbnJuQtfksFIq2fGvQUgoIoxeASEju3lfHe4cFczjdxWuwm/gBIAaXOsMEd/lB91/O9s1cPyluDNtXPfq5zoxaCSmwGuq5+O31bkHStiUWKuxnGrteuXW6qTUUkL2PPaYQqDmgb5rT5LN/YeTVXJv4GauuxCUSRDPXtkEXJGwtTm5cii8K7EfRf7QkmR2zwabPrM3DUsLsYE/7mCI+JhoynhKUmKw="
   file_glob: true
   file:
   - "deploy/*"
@@ -61,7 +61,7 @@ deploy:
 - provider: npm
   email: james.bulpin@citrix.com
   api_key:
-    [npm-release-key]
+    secure: "QucQTzVtM7CGyiKol4NVKQ3/kf2jmcklU5kJErVEmY3f15LsicvTgXv2S62wy+seJFtxqcdD04FDt9dK7TFnrQpoMc996Hbh2gVGUscvdyzk6y6EUom19LNYbzPIUzUQUtORqxI/lzbzNVGiIpy13ZhVrxFsLZYTKdqseMsWfLYR+EJm8o6ivSgIURHEfmddmvGnF11uf4tofuMUhI5K1DWtmohYIMNZLieYTvHv0CvB20FECKNyxQ/vmgi16oga6PmXe7pgdQmlUfi01MhcDVYMp51JDeZvaOYJyCadynZN/fuOTguTRhyDp2BoJSdC4H7ArgPHNgg/bn+4llB80UscqPvBqQSGXEh+oFLVIbGJAC3rXEjXFmXiduw7SjUB3GNoGzwQM4dYU2eDQIKVmpxD7279ILRaVUN1tNokuYvMsfHepiobIukLsUbjMIk589BoZI7F2d+5AqyZwoMJ88Qj4WB4o1tXeSO2xMK0lsW0qq8ZA7gkZLmA6TgcRwxUkcynjiyq+hOWP9m1EhakkuBO8trFj7H49jkc1dvUkN4/ZFl7MJWdl3hC4UohEhRehl6igc3bqvWNfLvNqM6dXo++2uZ9LndWGY+7e48JEXZKrjOIePxKvfNwDOPtupv2kfucVm8JZNzYS/P/Z76XBNljZUMnCamcx2TQu/nNZoU="
   on:
     tags: true
     condition: "$NPM_PUBLISH = true"
